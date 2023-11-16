@@ -5,7 +5,6 @@
 body {
   margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 80px;
@@ -13,26 +12,25 @@ body {
 
 .gameBoard {
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(206, 243, 243);
     width: 1000px;
     height: 500px;
 }
 
 .gameBopard__line {
-  position: relative;
-  top: 170px;
+  position: absolute;
+  top: 70%;
   height: 3px;
   width: 1000px;
   background-color: black;
 }
 
 .gameBoard__dino{
-  position: relative;
-  right: 380px;
-  top: 70px;
+  position: absolute;
+  left: 100px;
+  top: 50%;
   height: 100px;
   width: 100px;
   background-size: contain;
