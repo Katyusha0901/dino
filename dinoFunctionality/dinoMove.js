@@ -15,18 +15,15 @@ export function dinoJump() {
     } else {
       dataStorage.dino.coordinates.y = dataStorage.dino.coordinates.y + 1;
     }
-  }
-  else if (dataStorage.dino.direction === "down") {
+  } else if (dataStorage.dino.direction === "down") {
     setTimeout(dinoStandUp, 100);
   }
   setTimeout(dinoJump, 100);
 }
 
-function dinoStandUp(){
-  dataStorage.dino.direction = 'forward'
+function dinoStandUp() {
+  dataStorage.dino.direction = "forward";
 }
-
-
 
 setTimeout(dinoMove, 100);
 setTimeout(dinoJump, 100);

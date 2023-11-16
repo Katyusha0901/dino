@@ -11,5 +11,3 @@ document.addEventListener("keydown", function (event) {
       break;
   }
 });
-
-console.log(dataStorage.dino.direction)
