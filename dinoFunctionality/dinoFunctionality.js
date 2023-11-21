@@ -1,13 +1,10 @@
-import { dataStorage } from "../dataStorage.js";
+// import { dataStorage } from "../dataStorage.js";
+// import { dinoJump } from "./dinoMove.js";
+// import { dinoMove } from "./dinoMove.js";
+// import { jump } from "./dinoAnimation.js";
 
-document.addEventListener("keydown", function (event) {
-  switch (event.code) {
-    case "ArrowUp":
-      dataStorage.dino.direction = "up";
-      break;
-
-    case "ArrowDown":
-      dataStorage.dino.direction = "down";
-      break;
-  }
-});
+// export function dinoFunctionality() {
+//   while (dataStorage.dino.direction === "up") {
+//     window.requestAnimationFrame(jump);
+//   }
+// }
