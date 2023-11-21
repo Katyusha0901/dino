@@ -1,4 +1,5 @@
 import { dataStorage } from "../dataStorage.js";
+
 document.addEventListener("keydown", function (event) {
   if (event.code !== "ArrowUp") return;
   let start = Date.now();
