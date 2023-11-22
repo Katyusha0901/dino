@@ -52,19 +52,18 @@ body {
   z-index: 1;
 }
 
-.gameBoard__leftWall{
+.gameBoard__leftWall {
   position: absolute;
-  background-color:white;
+  background-color: white;
   width: 15%;
   height: 100%;
   left: 0%;
   z-index: 2;
 }
 
-
-.gameBoard__rightWall{
+.gameBoard__rightWall {
   position: absolute;
-  background-color:white;
+  background-color: white;
   width: 15%;
   height: 100%;
   right: 0%;
