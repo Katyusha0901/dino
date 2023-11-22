@@ -5,5 +5,9 @@ export const dataStorage = {
     isDucking: false,
   },
 
+  cactus: {
+    x: 1,
+  },
+
   gameStatus: "go",
 };
