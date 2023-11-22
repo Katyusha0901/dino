@@ -9,7 +9,13 @@ function dinoRunning() {
 
   dataStorage.dino.x = 0.6 * t;
 
-  if(dataStorage.gameStatus !== 'end'){
+  if (dataStorage.dino.x === dataStorage.cactus.x && dataStorage.dino.y > 70) {
     window.requestAnimationFrame(dinoRunning);
   }
+  return;
+  endOfTheGame();
+}
+
+function endOfTheGame() {
+    
 }

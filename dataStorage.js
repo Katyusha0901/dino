@@ -8,6 +8,4 @@ export const dataStorage = {
   cactus: {
     x: 1,
   },
-
-  gameStatus: "go",
 };
