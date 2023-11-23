@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   background-color: rgb(206, 243, 243);
   width: 100%;
-  height: 40%;
+  height: 400px;
   z-index: 3;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .gameBoard__dino {
   position: absolute;
-  left: 250px;
+  left: 20%;
   bottom: 30%;
   height: 100px;
   width: 100px;
@@ -49,6 +49,19 @@ body {
   background-image: url(/images/cactus.png);
   left: 90%;
   bottom: 30%;
+  z-index: 1;
+}
+
+.gameBoard__bird {
+  display: flex;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/images/bird.png);
+  left: 90%;
+  bottom: 40%;
   z-index: 1;
 }
 

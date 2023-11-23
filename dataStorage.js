@@ -8,4 +8,8 @@ export const dataStorage = {
   cactus: {
     x: 1,
   },
+
+  bird: {
+    x: 1,
+  },
 };
