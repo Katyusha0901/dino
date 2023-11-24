@@ -1,9 +1,14 @@
 import { dataStorage } from "../dataStorage.js";
 
-document.addEventListener("keydown", function (event) {
-  if (event.code === "ArrowDown") dataStorage.dino.isDucking = true;
-});
+dinoDucking();
 
-document.addEventListener("keyup", function (event) {
-  if (event.code === "ArrowDown") dataStorage.dino.isDucking = false;
-});
+function dinoDucking() {
+  document.addEventListener("keydown", function (event) {
+    if (event.code === "ArrowDown") dataStorage.dino.isDucking = true;
+  });
+
+  document.addEventListener("keyup", function (event) {
+    if (event.code === "ArrowDown") dataStorage.dino.isDucking = false;
+  });
+  window.requestAnimationFrame(dinoDucking);
+}

@@ -1,46 +1,54 @@
 import { dataStorage } from "./dataStorage.js";
 
-generateCactus();
+// generateCactus();
 setTimeout(generateBird, 1500);
 
 function generateCactus() {
-  dataStorage.cactus.x = dataStorage.dino.x + 1500;
+  dataStorage.cactus.x = dataStorage.dino.x + 1400;
+  let startTime = Date.now();
 
-  setTimeout(generateCactus, 3500);
+  showCactus();
+  function showCactus() {
+    let t = Date.now() - startTime;
+    let newPercentageValue = -0.02 * t + 90;
 
-  if (dataStorage.dino.x === dataStorage.cactus.x && dataStorage.dino.y < 70) {
-    return;
+    document.querySelector(".gameBoard__cactus").style.left =
+      `${newPercentageValue}` + "%";
+    if (
+      newPercentageValue < 21 &&
+      newPercentageValue > 19 &&
+      dataStorage.dino.y < 70
+    ) {
+      return;
+    } else {
+      window.requestAnimationFrame(showCactus);
+    }
   }
+
+  setTimeout(generateCactus, 4000);
 }
 
 function generateBird() {
-  dataStorage.bird.x = dataStorage.dino.x + 1700;
+  dataStorage.bird.x = dataStorage.dino.x + 1400;
+  let startTime = Date.now();
 
-  setTimeout(generateBird, 3900);
+  showBird();
 
-  if (dataStorage.dino.x === dataStorage.bird.x && dataStorage.dino.y < 70) {
-    return;
+  function showBird() {
+    let t = Date.now() - startTime;
+    let newPercentageValue = -0.02 * t + 90;
+    document.querySelector(".gameBoard__bird").style.left =
+      `${newPercentageValue}` + "%";
+    if (
+      newPercentageValue < 21 &&
+      newPercentageValue > 19 &&
+      dataStorage.dino.isDucking === false
+    ) {
+      return;
+    } else {
+      window.requestAnimationFrame(showBird);
+      console.log(newPercentageValue);
+    }
   }
-}
-
-export function showCactus() {
-  let newPercentageValue = (dataStorage.cactus.x - dataStorage.dino.x) / 17;
-
-  document.querySelector(".gameBoard__cactus").style.left =
-    `${newPercentageValue}` + "%";
-
-  if (dataStorage.cactus.x - dataStorage.dino.x > 20) {
-    window.requestAnimationFrame(showCactus);
-  }
-}
-
-export function showBird() {
-  let newPercentageValue = (dataStorage.bird.x - dataStorage.dino.x) / 17;
-
-  document.querySelector(".gameBoard__bird").style.left =
-    `${newPercentageValue}` + "%";
-
-  if (dataStorage.bird.x - dataStorage.dino.x > 10) {
-    window.requestAnimationFrame(showBird);
-  }
+  setTimeout(generateBird, 4000);
 }
