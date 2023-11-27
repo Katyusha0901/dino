@@ -10,7 +10,7 @@ function drawDino() {
 
   if (dataStorage.dino.isDucking === false) {
     document.querySelector(".gameBoard__dino").style.backgroundImage =
-      "url(./images/dino.png)";
+      "url(../images/dino.png)";
   } else {
     document.querySelector(".gameBoard__dino").style.backgroundImage =
       "url(/images/downdino.png)";
