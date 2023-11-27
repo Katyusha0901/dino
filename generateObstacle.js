@@ -1,7 +1,7 @@
 import { dataStorage } from "./dataStorage.js";
 
 generateCactus();
-setTimeout(generateBird, 2500);
+setTimeout(generateBird, 2000);
 
 function generateCactus() {
   dataStorage.cactus.x = dataStorage.dino.x + 1400;
