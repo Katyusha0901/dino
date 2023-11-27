@@ -13,5 +13,5 @@ export const dataStorage = {
     x: 1,
   },
 
-  gameStatus: 'go', 
+  gameStatus: "go",
 };

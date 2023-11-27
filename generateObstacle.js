@@ -8,12 +8,14 @@ function generateCactus() {
   let startTime = Date.now();
 
   showCactus();
+
   function showCactus() {
     let t = Date.now() - startTime;
     let newPercentageValue = -0.02 * t + 90;
 
     document.querySelector(".gameBoard__cactus").style.left =
       `${newPercentageValue}` + "%";
+
     if (
       newPercentageValue < 20.5 &&
       newPercentageValue > 19.9 &&
@@ -40,6 +42,7 @@ function generateBird() {
 
     document.querySelector(".gameBoard__bird").style.left =
       `${newPercentageValue}` + "%";
+
     if (
       newPercentageValue < 21 &&
       newPercentageValue > 19 &&
