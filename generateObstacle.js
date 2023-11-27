@@ -1,6 +1,6 @@
 import { dataStorage } from "./dataStorage.js";
 
-// generateCactus();
+generateCactus();
 setTimeout(generateBird, 1500);
 
 function generateCactus() {
@@ -37,6 +37,7 @@ function generateBird() {
   function showBird() {
     let t = Date.now() - startTime;
     let newPercentageValue = -0.02 * t + 90;
+
     document.querySelector(".gameBoard__bird").style.left =
       `${newPercentageValue}` + "%";
     if (
@@ -47,8 +48,8 @@ function generateBird() {
       return;
     } else {
       window.requestAnimationFrame(showBird);
-      console.log(newPercentageValue);
     }
   }
+  
   setTimeout(generateBird, 4000);
 }

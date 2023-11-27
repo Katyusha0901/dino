@@ -12,7 +12,7 @@ document.addEventListener("keydown", function (event) {
     let t = Date.now() - startTime;
 
     dataStorage.dino.y = (-1 / 3125) * (t * t) + (8 / 25) * t;
-    
+
     if (dataStorage.dino.y >= 0) {
       window.requestAnimationFrame(dinoJumping);
     } else {
