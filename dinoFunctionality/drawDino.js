@@ -13,7 +13,7 @@ function drawDino() {
       "url(../images/dino.png)";
   } else {
     document.querySelector(".gameBoard__dino").style.backgroundImage =
-      "url(/images/downdino.png)";
+      "url(../images/downdino.png)";
     document.querySelector(".gameBoard__dino").style.bottom = 26 + "%";
   }
 
