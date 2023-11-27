@@ -12,4 +12,6 @@ export const dataStorage = {
   bird: {
     x: 1,
   },
+
+  gameStatus: 'go', 
 };

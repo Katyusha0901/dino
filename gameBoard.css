@@ -61,14 +61,13 @@ body {
   background-repeat: no-repeat;
   background-image: url(/images/bird.png);
   left: 90%;
-  bottom: 40%;
+  bottom: 50%;
   z-index: 1;
 }
 
 .gameBoard__leftWall {
   position: absolute;
-  background-color: rgb(168, 33, 33);
-  opacity: 0.5;
+  background-color: white;
   width: 15%;
   height: 100%;
   left: 0%;
@@ -77,10 +76,38 @@ body {
 
 .gameBoard__rightWall {
   position: absolute;
-  background-color: rgb(168, 33, 33);
-  opacity: 0.5;
+  background-color: white;
   width: 15%;
   height: 100%;
   right: 0%;
   z-index: 2;
+}
+
+.gameStatus {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  top: 30%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(245, 37, 0);
+  border: solid 10px;
+  border-color: rgb(247, 211, 10);
+  font-size: 50px;
+  font-weight: 800;
+  z-index: 5;
+}
+
+.gameBoard__score {
+  position: absolute;
+  bottom: 75%;
+  left: 55%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 800;
+  background-color: rgb(255, 40, 3);
+  border: solid 10px;
+  border-color: rgb(247, 211, 10);
+  padding: 10px;
 }

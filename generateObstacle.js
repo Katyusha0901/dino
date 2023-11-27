@@ -1,7 +1,7 @@
 import { dataStorage } from "./dataStorage.js";
 
 generateCactus();
-setTimeout(generateBird, 1500);
+setTimeout(generateBird, 2500);
 
 function generateCactus() {
   dataStorage.cactus.x = dataStorage.dino.x + 1400;
@@ -15,17 +15,17 @@ function generateCactus() {
     document.querySelector(".gameBoard__cactus").style.left =
       `${newPercentageValue}` + "%";
     if (
-      newPercentageValue < 21 &&
-      newPercentageValue > 19 &&
-      dataStorage.dino.y < 70
+      newPercentageValue < 20.5 &&
+      newPercentageValue > 19.9 &&
+      dataStorage.dino.y < 65
     ) {
-      return;
+      dataStorage.gameStatus = "end";
     } else {
       window.requestAnimationFrame(showCactus);
     }
   }
 
-  setTimeout(generateCactus, 4000);
+  setTimeout(generateCactus, 4300);
 }
 
 function generateBird() {
@@ -45,11 +45,11 @@ function generateBird() {
       newPercentageValue > 19 &&
       dataStorage.dino.isDucking === false
     ) {
-      return;
+      dataStorage.gameStatus = "end";
     } else {
-      window.requestAnimationFrame(showBird);
+      setTimeout(window.requestAnimationFrame(showBird), 500);
     }
   }
-  
-  setTimeout(generateBird, 4000);
+
+  setTimeout(generateBird, 4300);
 }

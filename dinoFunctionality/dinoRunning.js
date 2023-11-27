@@ -8,7 +8,8 @@ function dinoRunning() {
   let t = Date.now() - startTime;
 
   dataStorage.dino.x = 0.4 * t;
-  if (dataStorage.dino.x !== dataStorage.cactus.x && dataStorage.dino.y < 70) {
+
+  if (dataStorage.gameStatus === "go") {
     window.requestAnimationFrame(dinoRunning);
   }
   return;
