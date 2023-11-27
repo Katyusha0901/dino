@@ -46,7 +46,7 @@ body {
   width: 100px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./images/cactus.png);
+  background-image: url(https://katyusha0901.github.io/images/cactus.png);
   left: 90%;
   bottom: 30%;
   z-index: 1;
@@ -59,7 +59,7 @@ body {
   width: 100px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./images/bird.png);
+  background-image: url(https://katyusha0901.github.io/images/bird.png);
   left: 90%;
   bottom: 50%;
   z-index: 1;
