@@ -1,5 +1,5 @@
-<h1>DINOZAUR</h1>
-<p>Dinoxaur game implementation</p>
+<h1>Google-dino</h1>
+<p>Google-dino game implementation</p>
 <p>It was made with plain CSS & JavaScript. You can try it <a href="https://katyusha0901.github.io/dino/"> here</a>. </p>
 
 <h2>Authors</h2>
